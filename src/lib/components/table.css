@@ -29,6 +29,7 @@ th {
   text-align: left;
   border-bottom: 1px solid #1b1818;
   background-color: #b1c46c;
+
 }
 
 /* Style pour les cellules du corps */
@@ -58,10 +59,18 @@ tr:nth-child(odd) {
   background-color: #edf1e1;
 }
 
-table button{
+table button {
   background-color: #b1c46c;
   border: none;
+  margin-left: 8px;
+   width: 50px;
+   display: block;
+   margin-top: 8px;
 }
-.selectedBtnSort{
-  background: #344f04;
+
+table button > svg {
+  height:1.4rem;
+  width: 1.4rem;
+  vertical-align: center;
 }
+

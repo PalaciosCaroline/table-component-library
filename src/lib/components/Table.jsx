@@ -3,7 +3,7 @@ import { sortDates } from './sortDates';
 import { FaSortDown, FaSortUp } from 'react-icons/fa';
 import './table.css';
 
-export default function Table({ data, columns, headerStyle = {}, cellStyle = {} }) {
+export default function Table({ data, columns }) {
   const [sortKey, setSortKey] = useState(null);
   const [sortOrder, setSortOrder] = useState('asc');
 
@@ -14,29 +14,27 @@ export default function Table({ data, columns, headerStyle = {}, cellStyle = {} 
 
   const renderHeader = () => {
     return (
-      <thead>
-        <tr>
+      <thead className='thead'>
+        <tr className='tr'>
           {columnData.map(({ label, property, selectedBtnSort }) => (
-            <th key={property} style={headerStyle}>
+            <th key={property} className='th'>
               <div style={{ display: 'flex', alignItems: 'center' }}>
-                <p style={{ display: 'block', textAlign:'center'}}>{label}</p>
+                <p className='label'>{label}</p>
                 <div>
                   <button
                     type="button"
                     onClick={() => handleSort(property, 'asc')}
-                    style={{ marginLeft: '8px' , width: '50px',display: 'inline-block'}}
-                    className={selectedBtnSort && sortOrder === 'asc' ? 'selectedBtnSort' : ''}
+                    className={`btnForSort ${selectedBtnSort && sortOrder === 'asc' ? 'selectedBtnSort' : ''}`}
                   >
-                    <FaSortUp  style={{ height:'1.4rem', width: '1.4rem',verticalAlign: 'center' }} />
+                    <FaSortUp className='btnSortIcon' />
                   </button>
                 
                   <button
                     type="button"
                     onClick={() => handleSort(property, 'desc')}
-                    style={{ marginLeft: '8px', width: '50px',display: 'block', marginTop: '8px'}}
-                    className={selectedBtnSort && sortOrder === 'desc' ? 'selectedBtnSort' : ''}
+                    className={`btnForSort ${selectedBtnSort && sortOrder === 'desc' ? 'selectedBtnSort' : ''}`}
                   >
-                    <FaSortDown style={{ height:'1.4rem', width: '1.4rem',verticalAlign: 'center' }} />
+                    <FaSortDown className='btnSortIcon' />
                   </button>
                 </div>
               </div>
@@ -62,11 +60,11 @@ export default function Table({ data, columns, headerStyle = {}, cellStyle = {} 
     }
 
     return (
-      <tbody>
+      <tbody className='tbody'>
         {sortedData.map((item, index) => (
-          <tr key={index}>
+          <tr key={index} className='tr'>
             {columns.map(({ property }) => (
-              <td key={`cell-${index}-${property}`} style={cellStyle ? cellStyle : style }>{item[property]}</td>
+              <td key={`cell-${index}-${property}`} className='td'>{item[property]}</td>
             ))}
           </tr>
         ))}
@@ -81,7 +79,7 @@ export default function Table({ data, columns, headerStyle = {}, cellStyle = {} 
   }));
 
   return (
-    <table>
+    <table className='table'>
       {renderHeader(columnData)}
       {renderBody()}
     </table>
