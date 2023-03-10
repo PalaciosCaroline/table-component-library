@@ -7,7 +7,64 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+
+.box_table{
+  width: 90%;
+  margin: 20px auto;
+}
+table {
+  border-collapse: collapse;
+  width: 100%;
+  font-size: 14px;
+  /* margin: 30px auto; */
+}
+
+/* Style pour l'en-tête */
+thead {
+  font-weight: bold;
+}
+
+/* Style pour les cellules de l'en-tête */
+th {
+  padding: 8px;
+  text-align: left;
+  border-bottom: 1px solid #1b1818;
+  background-color: #97da85;
+  background-color: hsl(73, 76%, 28%);
+  background-color: #b1c46c;
+}
+
+/* Style pour les cellules du corps */
+td {
+  padding: 8px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+ 
+}
+
+/* Style pour la première ligne */
+tbody tr:first-child td {
+  border-top: 1px solid #171313;
+}
+
+/* Style pour la dernière ligne */
+tbody tr:last-child td {
+  border-bottom: 1px solid #171313;
+}
+
+/* Style pour les lignes impaires */
+tr:nth-child(even) {
+  background-color: #f6f9eb;
+}
+
+tr:nth-child(odd) {
+  background-color: #edf1e1;
+}
+
+table button{
+  background-color: #b1c46c;
+  border: none;
+}
+.selectedBtnSort{
+  background: #344f04;
 }
