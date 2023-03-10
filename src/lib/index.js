@@ -1,3 +1,3 @@
-import Table from './lib/components/Table';
+import Table from './components/Table';
 
 export { Table };
