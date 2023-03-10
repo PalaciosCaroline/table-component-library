@@ -7,7 +7,6 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-
 .box_table{
   width: 90%;
   margin: 20px auto;
@@ -29,8 +28,6 @@ th {
   padding: 8px;
   text-align: left;
   border-bottom: 1px solid #1b1818;
-  background-color: #97da85;
-  background-color: hsl(73, 76%, 28%);
   background-color: #b1c46c;
 }
 

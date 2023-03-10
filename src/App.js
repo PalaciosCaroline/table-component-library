@@ -1,6 +1,6 @@
 import React from 'react';
 import Table from './components/Table';
-import {columnsExample, datasExample} from './dataForExemple'
+import {columnsExample, datasExample} from './dataForExemple';
 
 function App() {
   return (

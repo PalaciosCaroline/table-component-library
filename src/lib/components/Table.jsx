@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { FaSortDown, FaSortUp } from 'react-icons/fa';
+import './table.css';
 
 export default function Table({ data, columns }) {
   const [sortKey, setSortKey] = useState(null);
