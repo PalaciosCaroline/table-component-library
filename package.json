@@ -6,7 +6,7 @@
   "module":"dist/index.js",
   "repository": {
     "type": "git",
-    "url": ""
+    "url": "https://github.com/PalaciosCaroline/table-component-library.git"
   },
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.5",
